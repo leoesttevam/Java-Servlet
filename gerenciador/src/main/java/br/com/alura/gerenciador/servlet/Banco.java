@@ -49,5 +49,10 @@ public class Banco {
         return null;
     }
 
+	public List<Empresa> getEmpresas() {
+		
+		return this.lista;
+	}
+
 }
 

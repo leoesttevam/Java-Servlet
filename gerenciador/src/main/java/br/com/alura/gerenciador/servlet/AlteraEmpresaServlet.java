@@ -25,7 +25,7 @@ public class AlteraEmpresaServlet extends HttpServlet {
         String paramId = request.getParameter("id");
 		Integer id = Integer.valueOf(paramId);
 
-        Date dataAbertura = null;
+        Date dataAbertura = Date.from(null);
         
         try {
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -41,7 +41,7 @@ public class AlteraEmpresaServlet extends HttpServlet {
         empresa.setNome(nomeEmpresa);
         empresa.setDataAbertura(dataAbertura);
         
-        response.sendRedirect("listaEmpresas");
+        response.sendRedirect("listaEmpresa");
 
     }
 
